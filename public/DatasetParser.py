@@ -59,7 +59,7 @@ class DatasetParser(Dataset):
 
 
 
-    def plot_first_orbits(self, orbit_type):
+    def plot_first_orbits(self, orbit_type,orbit_nb=5):
         plt.figure()
         if orbit_type == "circular":
             variables = {"a": "km", "ex": "", "ey": "", "i": "deg", "raan": "deg", "av": "deg"}
@@ -70,7 +70,7 @@ class DatasetParser(Dataset):
 
         for i, variable in enumerate(variables.keys()):
             plt.subplot(3, 2, i + 1)
-            for sample in range (5):
+            for sample in range (orbit_nb):
                 plt.plot(
                     self.get_data_preprocessed(sample, variable)
                 )
