@@ -1,0 +1,5 @@
+output/*
+.DS_Store
+.idea/
+public/__pycache__/*
+
